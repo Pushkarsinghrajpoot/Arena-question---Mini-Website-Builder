@@ -25,17 +25,17 @@ const App = () => {
         <label>Char limit</label>
         <input id='charlimit-input' type='number' onChange={textLimit} value={charLimit} />
         <input type='color'onChange={colorValue}  />
-        <input value={value} onChange={textInput}  maxLength={charLimit}  />
+        <input type='text' value={value} onChange={textInput}  maxLength={charLimit}  />
         <input type='range' onChange={slider} max={32} />
-        
-      </form>
-      <div id='changing-div' style={{
+        <div id='changing-div' style={{
         backgroundColor :`${color}`,
         padding :`${range}px`
     
         }} >
           {value}
       </div>
+      </form>
+      
     </div>
   )
 }
